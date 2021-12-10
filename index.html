@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <ul class="container">
+      <div class="workout-form-container">
+        <h1>MGK maps</h1>
+        <div class="workout-form hidden">
+          <form class="form">
+            <label class="form-label">Type</label>
+            <select class="form-answer">
+              <option value="running">running</option>
+              <option value="cycling">cycling</option>
+            </select>
+          </form>
+          <form class="form">
+            <label class="form-label">Distance</label>
+            <input class="form-answer input-distance" placeholder="km" />
+          </form>
+          <form class="form">
+            <label class="form-label">Duration</label>
+            <input class="form-answer input-duration" placeholder="min" />
+          </form>
+          <form class="cadence-form form">
+            <label class="form-label">Cadence</label>
+            <input class="form-answer input-cadence" placeholder="step/min" />
+          </form>
+          <form class="elevation-form form hidden">
+            <label class="form-label">Elevation</label>
+            <input
+              class="form-answer input-elevation"
+              placeholder="elevation"
+            />
+          </form>
+        </div>
+      </div>
+      <div id="map"></div>
+    </ul>
+  </body>
+</html>
